@@ -18,7 +18,7 @@ function sprawdz(x) {
   document.getElementById(element).setAttribute("onclick", ";");
 
   if (arr.length >= 6) {
-    for (var i = 1; i < 50; i++) {
+    for (var i = 1; i < 90; i++) {
       var es = "lit" + i;
       document.getElementById(es).style.cursor = "default";
       document.getElementById(es).setAttribute("onclick", ";");
