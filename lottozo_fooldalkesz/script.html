@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lottózó</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="stilus.css">
+    
+  </head>
+
+  <header>
+    <div class="logo">
+        <p class="hub">Lotto<span>Hub</span></p>
+    </div>
+    <hr>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="script.html">Program</a>
+        <a href="szelveny.html">Eddigi nyertesek</a>
+        <a href="tortenet.html">Történet</a>
+    </nav>
+</header>
+
+  <body>
+    <div class="container center rounded shadow-lg">
+      <div class=" my-4" id="cyfry"></div>
+      <div class="h4" id="napis"></div>
+
+      <div>
+        <div class="cyfral" id="l1"></div>
+        <div class="cyfral" id="l2"></div>
+        <div class="cyfral" id="l3"></div>
+        <div class="cyfral" id="l4"></div>
+        <div class="cyfral" id="l5"></div>
+        <div class="cyfral" id="l6"></div>
+      </div>
+      <button id="przyc" class="m-2 btn btn-dark" onclick="spr()" type="button">
+        Ellenőrzés
+      </button>
+      <button class="m-2 btn btn-dark" onClick="window.location.reload()">
+        Újra
+      </button>
+      <div class="container" id="alfabet"></div>
+    </div>
+    <footer>
+        <p>Elérhetőségek:<br>Fábián Tamás: huzsiii<br>Bartók Krisztián: kriszbartok<br>Ináncsi Krisztián: krisz3738<br>Halász Bendegúz: bend.h10
+         <p>&copy; Szerkesztette: Krisszek</p></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

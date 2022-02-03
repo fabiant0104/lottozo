@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottózó</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="stilus.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p class="hub">Lotto<span>Hub</span></p>
+        </div>
+        <hr>
+        <nav>
+            <a href="index.html">Főoldal</a>
+            <a href="script.html">Program</a>
+            <a href="szelveny.html">Eddigi nyertesek</a>
+            <a href="tortenet.html">Történet</a>
+        </nav>
+    </header>
+    <!-- Ne töröld ki, mert e-nélkül megtörik a flex oszlop -->
+    <main>
+        <div class="card" id="index-titlebar" style="margin-bottom: .5rem;">
+            <a href="https://www.szerencsejatek.hu/">
+                <img src="https://i.imgur.com/ATAcWTq.png" alt="szerencsejatek logo" height="40px" style="margin: 0 !important;">
+            </a>
+            <h1 style="float: right;">Aktuális lottók</h1>
+        </div>
+        <div class="card-row">
+            <div class="card">
+                <img class="card-img" src="https://i.imgur.com/tV9cupJ.png" alt="logó">
+                <h1>Húzás időpontja: <span id="otos-drawDate"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="20" height="20"></span></h1>
+                <p>Hét: <span id="otos-week"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <p>Várható főnyeremény: <span id="otos-expectedPrice"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://i.imgur.com/ivLvN5k.png" alt="logó">
+                <h1>Húzás időpontja: <span id="hatos-drawDate"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="20" height="20"></span></h1>
+                <p>Hét: <span id="hatos-week"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <p>Főnyeremény: <span id="hatos-expectedPrice"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://i.imgur.com/stvJ9PJ.png" alt="logó">
+                <h1>Húzás időpontja: <span id="skandinav-drawDate"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="20" height="20"></span></h1>
+                <p>Hét: <span id="skandinav-week"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <p>Főnyeremény: <span id="skandinav-expectedPrice"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://i.imgur.com/zxG4Oa7.png" alt="logó">
+                <h1>Húzás időpontja: <span id="euro-drawDate"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="20" height="20"></span></h1>
+                <p>Hét: <span id="euro-week"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <p>Főnyeremény: <span id="euro-expectedPrice"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <span id="euro-grossPrice"></span>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://i.imgur.com/9N6He3z.png" alt="logó">
+                <h1>Húzás időpontja: <span id="luxor-drawDate"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="20" height="20"></span></h1>
+                <p>Hét: <span id="luxor-week"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <p>Főnyeremény: <span id="luxor-expectedPrice"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://i.imgur.com/Vxf2yhn.png" alt="logó">
+                <h1>Húzás időpontja: <span id="joker-drawDate"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="20" height="20"></span></h1>
+                <p>Hét: <span id="joker-week"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+                <p>Főnyeremény: <span id="joker-expectedPrice"><img src="https://i.gifer.com/origin/b4/b4d657e7ef262b88eb5f7ac021edda87.gif" width="10" height="10"></span></p>
+            </div>
+        </div>
+        <!-- <iframe src="https://bet.szerencsejatek.hu/jatekok/otoslotto" frameborder="0"></iframe> -->
+    </main>
+    <footer>
+        <p>Elérhetőségek:<br>Fábián Tamás: huzsiii<br>Bartók Krisztián: kriszbartok<br>Ináncsi Krisztián: krisz3738<br>Halász Bendegúz
+         <p>&copy; Szerkesztette: Krisszek</p></p>
+    </footer>
+
+    <script src="api.js"></script>
+</body>
+</html>
+

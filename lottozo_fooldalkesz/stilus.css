@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --accent: #FF9900;
+    --bg_primary: #000000;
+    --bg_secondary: #292929;
+    --text: #ffffff;
+    --muted: #808080;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif; 
+    background-color: var(--bg_primary);
+    color: var(--text);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+header {
+    margin-top: 20px;
+    /* I. Krisztián kérése lejjebb toljuk a headert */
+    text-align: center;
+    background-color: var(--bg_secondary);
+    font-weight: bold;
+}
+
+.logo {
+    padding: .8rem;
+}
+
+.hub {
+    font-size: 2rem;
+}
+
+.hub span {
+    background-color: var(--accent);
+    color: var(--bg_primary);
+    border-radius: 3px;
+    margin-left: .4rem;
+    padding: 2px 4px;
+}
+
+/* Nav */
+
+nav a {
+    font-size: 1.15rem;
+    color: var(--text);
+    padding: .7rem 5rem;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+    border: 1px solid var(--muted);
+    background-color: #303030;
+}
+
+nav a .aktív {
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Main */
+
+main {
+    flex: 1; 
+    /* A footert mindig a viewport aljára tolja, 
+    attól függetlenül, hogy van-e elég tartalom */
+
+    padding: 1rem;
+}
+
+/* Footer */
+
+footer {
+    padding: .6rem;
+    background-color: var(--bg_secondary);
+    text-align: center;
+    border: 2px var(--accent);
+    border-style: solid none;
+    margin-top: auto;
+}
+
+/* Typography */
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+    margin: 1rem 0;
+    width: fit-content;
+    /* Hogy ne legyen az aláhúzás teljes szélességű */
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+    margin-top: 0;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child {
+    margin-bottom: 0;
+}
+
+/* Etc */
+
+hr {
+    padding: 0;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+/* Content */
+
+.tartalom {
+    background-color: var(--bg_secondary);
+    padding: .6rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* Mert lusta geci vagyok egy reszponzív szerkezetet összedobni,
+    mobilon csak levágjuk a kép jobb szélét */
+}
+
+.tartalom aside {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tartalom aside img {
+    border-bottom: 1rem;
+}
+
+table {
+    background-color: var(--bg_secondary);
+}
+
+.card {
+    background-color: var(--bg_secondary);
+    padding: .5rem;
+}
+
+.card h1 {
+    margin-top: 0;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.card-row .card {
+    margin-right: .5rem;
+}
+
+.card-row .card .card-img {
+    max-height: 62px;
+    margin-bottom: .5rem;
+}
+
+.card-row .card:last-child {
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 1150px) {
+    .card-row {
+        flex-direction: column;
+    }
+
+    .card-row .card {
+        margin-right: 0;
+        margin-bottom: .5rem;
+    }
+
+    .card-row .card:last-child {
+        margin-bottom: 0;
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    .card-row .card {
+        text-align: center;
+    }
+   
+    #index-titlebar {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .card-row .card {
+        text-align: center;
+    }
+
+    #index-titlebar h1 {
+        display: none;
+    }
+}
+
+/* szelvény */
+
+.center {
+    background-color: #292929;
+    height: 600px !important;
+    width: 450px !important;
+    text-align: center !important;
+    margin: 1rem auto;
+  }
+  
+  .btn {
+    width: 150px;
+  }
+  
+  .cyfral {
+    width: 50px !important;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    border: 3px solid black;
+    display: inline-block;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+    background-color: #FF9900;
+  }
+  
+  .litera {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin: 3px;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .litera:hover {
+    background-color: gainsboro;
+    color: black;
+    border: 3 px solid white;
+    font-weight: bold;
+  }
+  
